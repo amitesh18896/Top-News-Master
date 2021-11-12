@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/newslistFragment">
+    <fragment
+        android:id="@+id/newslistFragment"
+        android:name="com.pallaw.topnews.ui.news.list.NewsListFragment"
+        android:label="@string/news_list_fragment_label"
+        tools:layout="@layout/fragment_news_list">
+        <action
+            android:id="@+id/action_newslistFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment"
+            app:enterAnim="@anim/frag_enter_slide_in_from_right"
+            app:exitAnim="@anim/frag_exit_slide_out_to_left"
+            app:popEnterAnim="@anim/frag_pop_enter_slide_in_from_left"
+            app:popExitAnim="@anim/frag_pop_exit_slide_out_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.pallaw.topnews.ui.news.detail.NewsDetailFragment"
+        android:label="@string/news_detail_fragment_label"
+        tools:layout="@layout/fragment_news_detail" >
+        <argument
+            android:name="item"
+            app:argType="com.pallaw.topnews.data.model.resourse.Article" />
+    </fragment>
+</navigation>

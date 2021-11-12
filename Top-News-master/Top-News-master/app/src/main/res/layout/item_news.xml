@@ -1,0 +1,84 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/card_margin"
+    android:layout_marginTop="@dimen/card_margin"
+    android:layout_marginRight="@dimen/card_margin"
+    android:paddingBottom="@dimen/card_margin"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:cardCornerRadius="@dimen/cardview_default_radius"
+    app:cardElevation="@dimen/cardview_compat_inset_shadow">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_news_item"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:foreground="@drawable/img_foreground"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="H,16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/txt_news_item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/card_margin"
+            android:layout_marginEnd="@dimen/card_margin"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:lines="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/img_news_item"
+            app:layout_constraintEnd_toEndOf="@+id/img_news_item"
+            app:layout_constraintStart_toStartOf="@+id/img_news_item"
+            tools:text="Supreme Court asks states to consider online sales, home delivery of liquor - Times of India" />
+
+        <TextView
+            android:id="@+id/txt_news_item_source"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintEnd_toEndOf="@+id/img_news_item"
+            app:layout_constraintStart_toStartOf="@+id/img_news_item"
+            app:layout_constraintTop_toBottomOf="@+id/img_news_item"
+            tools:text="The Times of India" />
+
+        <TextView
+            android:id="@+id/txt_news_item_time_ago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="@+id/txt_news_item_source"
+            app:layout_constraintTop_toBottomOf="@+id/txt_news_item_source"
+            tools:text="2020-05-08T12:31:42Z" />
+
+        <TextView
+            android:id="@+id/txt_news_item_des"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/txt_news_item_source"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_news_item_source"
+            app:layout_constraintTop_toBottomOf="@+id/txt_news_item_time_ago"
+            tools:text="India News: The Supreme Court on Friday asked states to consider non-direct contact or online sales and home delivery of liquor during the lockdown period to prev" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

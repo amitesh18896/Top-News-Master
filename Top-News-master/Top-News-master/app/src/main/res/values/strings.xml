@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Top News</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="news_list_fragment_label">Top news from India</string>
+    <string name="news_detail_fragment_label">News Detail</string>
+
+</resources>
